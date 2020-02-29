@@ -38,7 +38,7 @@ module Showoff
 
     def show(id = nil)
       url = id.nil? ? USERS_ME_PATH : "#{USERS_PATH}/#{id}"
-      perform_get_request(url)
+      perform_get_request(url, { authorization: "Bearer #{@access_token}" })
     end
 
     def change_password(options = {})
@@ -48,7 +48,7 @@ module Showoff
           new_password: options[:new_password]
         }
       }
-      perform_post_request(USERS_ME_PASSWORD_PATH, {}, body.compact)
+      perform_post_request(USERS_ME_PASSWORD_PATH, { authorization: "Bearer #{@access_token}" }, body.compact)
     end
 
     def check_email(options = {})

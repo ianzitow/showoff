@@ -2,10 +2,13 @@ module Showoff
   class Base
     CLIENT_ID = Rails.application.credentials.showoff[:client_id].freeze
     CLIENT_SECRET = Rails.application.credentials.showoff[:client_secret].freeze
-    BASE_URL = 'https://showoff-rails-react-production.herokuapp.com/api/v1'.freeze
+    BASE_URL = 'https://showoff-rails-react-production.herokuapp.com'.freeze
 
-    def initialize(access_token = nil)
+    attr_reader :access_token, :refresh_token
+
+    def initialize(access_token = nil, refresh_token = nil)
       @access_token = access_token
+      @refresh_token = refresh_token
     end
 
     %i[get post put delete].each do |method|

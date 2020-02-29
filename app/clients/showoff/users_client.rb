@@ -2,11 +2,11 @@
 
 module Showoff
   class UsersClient < Base
-    USERS_PATH = 'users'
-    USERS_ME_PATH = 'users/me'
-    USERS_EMAIL_PATH = 'users/email'
-    USERS_ME_PASSWORD_PATH = 'users/me/password'
-    USERS_RESET_PASSWORD_PATH = 'users/reset_password'
+    USERS_PATH = 'api/v1/users'
+    USERS_ME_PATH = 'api/v1/users/me'
+    USERS_EMAIL_PATH = 'api/v1/users/email'
+    USERS_ME_PASSWORD_PATH = 'api/v1/users/me/password'
+    USERS_RESET_PASSWORD_PATH = 'api/v1/users/reset_password'
 
     def create(options = {})
       body = {
@@ -21,6 +21,7 @@ module Showoff
       response = perform_post_request(USERS_PATH, {}, body.compact)
       response_json = Oj.load(response.body, symbol_keys: true)
       @access_token = response_json[:data][:token][:access_token]
+      @refresh_token = response_json[:data][:token][:refresh_token]
       response
     end
 

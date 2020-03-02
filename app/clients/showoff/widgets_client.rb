@@ -10,9 +10,9 @@ module Showoff
           name: options[:name],
           description: options[:description],
           kind: options[:kind]
-        }
+        }.compact
       }
-      perform_post_request(WIDGETS_PATH, { authorization: "Bearer #{@access_token}" }, body.compact)
+      perform_post_request(WIDGETS_PATH, { authorization: "Bearer #{@access_token}" }, body)
     end
 
     def update(id, options = {})
@@ -20,9 +20,9 @@ module Showoff
         widget: {
           name: options[:name],
           description: options[:description]
-        }
+        }.compact
       }
-      perform_put_request("#{WIDGETS_PATH}/#{id}", { authorization: "Bearer #{@access_token}" }, body.compact)
+      perform_put_request("#{WIDGETS_PATH}/#{id}", { authorization: "Bearer #{@access_token}" }, body)
     end
 
     def show

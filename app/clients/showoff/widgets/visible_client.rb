@@ -6,8 +6,8 @@ module Showoff
       WIDGETS_VISIBLE_PATH = 'api/v1/widgets/visible'
 
       def show(term = nil)
-        body = { term: term }
-        perform_get_request(WIDGETS_VISIBLE_PATH, { authorization: "Bearer #{@access_token}" }, body.compact)
+        body = { term: term }.compact
+        perform_get_request(WIDGETS_VISIBLE_PATH, { authorization: "Bearer #{@access_token}" }, body)
       end
     end
   end

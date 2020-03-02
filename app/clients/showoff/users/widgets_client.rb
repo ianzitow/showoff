@@ -8,8 +8,8 @@ module Showoff
 
       def show(id = nil, term = nil)
         url = id.nil? ? USERS_ME_WIDGETS_PATH : "#{USERS_PATH}/#{id}/widgets"
-        body = { term: term }
-        perform_get_request(url, { authorization: "Bearer #{@access_token}" }, body.compact)
+        body = { term: term }.compact
+        perform_get_request(url, { authorization: "Bearer #{@access_token}" }, body)
       end
     end
   end

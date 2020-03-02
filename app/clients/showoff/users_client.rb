@@ -16,9 +16,9 @@ module Showoff
           password: options[:password],
           email: options[:email],
           image_url: options[:image_url]
-        }
+        }.compact
       }
-      response = perform_post_request(USERS_PATH, {}, body.compact)
+      response = perform_post_request(USERS_PATH, {}, body)
       response_json = Oj.load(response.body, symbol_keys: true)
       @access_token = response_json[:data][:token][:access_token]
       @refresh_token = response_json[:data][:token][:refresh_token]
@@ -32,9 +32,9 @@ module Showoff
           last_name: options[:last_name],
           date_of_birth: options[:date_of_birth],
           image_url: options[:image_url]
-        }
+        }.compact
       }
-      perform_put_request(USERS_ME_PATH, { authorization: "Bearer #{@access_token}" }, body.compact)
+      perform_put_request(USERS_ME_PATH, { authorization: "Bearer #{@access_token}" }, body)
     end
 
     def show(id = nil)
@@ -47,25 +47,25 @@ module Showoff
         user: {
           current_password: options[:current_password],
           new_password: options[:new_password]
-        }
+        }.compact
       }
-      perform_post_request(USERS_ME_PASSWORD_PATH, { authorization: "Bearer #{@access_token}" }, body.compact)
+      perform_post_request(USERS_ME_PASSWORD_PATH, { authorization: "Bearer #{@access_token}" }, body)
     end
 
     def check_email(options = {})
       body = {
         email: options[:email]
-      }
-      perform_get_request(USERS_EMAIL_PATH, {}, body.compact)
+      }.compact
+      perform_get_request(USERS_EMAIL_PATH, {}, body)
     end
 
     def reset_password(options = {})
       body = {
         user: {
           email: options[:email]
-        }
+        }.compact
       }
-      perform_post_request(USERS_RESET_PASSWORD_PATH, {}, body.compact)
+      perform_post_request(USERS_RESET_PASSWORD_PATH, {}, body)
     end
   end
 end

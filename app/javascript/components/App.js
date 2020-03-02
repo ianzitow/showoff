@@ -1,14 +1,14 @@
 import React from "react"
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PropTypes from "prop-types"
-import Home from "./Home";
+import Widgets from "./Widgets";
 class App extends React.Component {
   render () {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path={"/"} render={() => <Home/>}/>
-          <Route path={"/widgets"} render={() => ("Home!")}/>
+          <Route exact path={"/"} render={() => <Widgets />}/>
+          <Route path={"/widgets"} render={() => <Widgets personal />}/>
         </Switch>
       </BrowserRouter>
     );

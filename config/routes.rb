@@ -13,12 +13,12 @@ Rails.application.routes.draw do
       post 'users/change_password'
       get 'users/check_email'
       post 'users/reset_password'
-      get 'users/:id/widgets', to: 'widgets#index'
+      get 'users/:id/widgets', to: 'users/widgets#index'
       # Widgets
       namespace :widgets do
         get 'visible', to: 'visible#index'
       end
-      post 'widgets/create'
+      post 'widgets', to: 'widgets#create'
       put 'widgets/:id', to: 'widgets#update'
       get 'widgets/show'
       delete 'widgets/:id', to: 'widgets#destroy'

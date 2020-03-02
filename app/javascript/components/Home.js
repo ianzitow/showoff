@@ -22,7 +22,7 @@ import {
 import axios from 'axios';
 import _ from 'lodash';
 
-class HelloWorld extends React.Component {
+class Home extends React.Component {
 
   state = {
     username: '',
@@ -152,7 +152,7 @@ class HelloWorld extends React.Component {
   }
 }
 
-HelloWorld.propTypes = {
+Home.propTypes = {
   greeting: PropTypes.string
 };
-export default HelloWorld
+export default Home

@@ -10,7 +10,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def show
-    response = users_client.show(user_id == 'me' ? nil : user_id)
+    response = users_client.show(shows_me? ? nil : user_id)
     render json: response.body, status: response.code
   end
 
@@ -41,5 +41,9 @@ class Api::V1::UsersController < ApplicationController
 
   def user_id
     params[:id]
+  end
+
+  def shows_me?
+    user_id == 'me'
   end
 end

@@ -24,5 +24,6 @@ Rails.application.routes.draw do
       delete 'widgets/:id', to: 'widgets#destroy'
     end
   end
+  get '*page', to: 'static#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

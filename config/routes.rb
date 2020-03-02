@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :home, only: :index
+  root to: 'static#index'
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       # Authentication
@@ -13,7 +13,11 @@ Rails.application.routes.draw do
       post 'users/change_password'
       get 'users/check_email'
       post 'users/reset_password'
+      get 'users/:id/widgets', to: 'widgets#index'
       # Widgets
+      namespace :widgets do
+        get 'visible', to: 'visible#index'
+      end
       post 'widgets/create'
       put 'widgets/:id', to: 'widgets#update'
       get 'widgets/show'

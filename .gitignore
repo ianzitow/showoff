@@ -53,10 +53,6 @@ bower.json
 # Ignore node_modules
 node_modules/
 
-# Ignore precompiled javascript packs
-/public/packs
-/public/packs-test
-
 # Ignore yarn files
 /yarn-error.log
 yarn-debug.log*
@@ -66,7 +62,6 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
-/public/packs
 /public/packs-test
 /node_modules
 /yarn-error.log

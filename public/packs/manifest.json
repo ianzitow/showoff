@@ -1,41 +1,42 @@
 {
   "application.css": "/packs/css/application-460a5439.css",
-  "application.js": "/packs/js/application-4ae464fd679ffc824832.js",
-  "application.js.map": "/packs/js/application-4ae464fd679ffc824832.js.map",
+  "application.js": "/packs/js/application-e0957fdbac297c4bc252.js",
+  "application.js.map": "/packs/js/application-e0957fdbac297c4bc252.js.map",
   "entrypoints": {
     "application": {
       "css": [
         "/packs/css/application-460a5439.css"
       ],
       "js": [
-        "/packs/js/application-4ae464fd679ffc824832.js"
+        "/packs/js/application-e0957fdbac297c4bc252.js"
       ],
       "js.map": [
-        "/packs/js/application-4ae464fd679ffc824832.js.map"
+        "/packs/js/application-e0957fdbac297c4bc252.js.map"
       ]
     },
     "hello_react": {
+      "css": [
+        "/packs/css/hello_react-460a5439.css"
+      ],
       "js": [
-        "/packs/js/hello_react-98df1de4576fcecad564.js"
+        "/packs/js/hello_react-af13e27a4289e0d61acc.js"
       ],
       "js.map": [
-        "/packs/js/hello_react-98df1de4576fcecad564.js.map"
+        "/packs/js/hello_react-af13e27a4289e0d61acc.js.map"
       ]
     },
     "server_rendering": {
-      "css": [
-        "/packs/css/server_rendering-460a5439.css"
-      ],
       "js": [
-        "/packs/js/server_rendering-71de6cc9d37b1845213d.js"
+        "/packs/js/server_rendering-a838d7f928f3294668a3.js"
       ],
       "js.map": [
-        "/packs/js/server_rendering-71de6cc9d37b1845213d.js.map"
+        "/packs/js/server_rendering-a838d7f928f3294668a3.js.map"
       ]
     }
   },
-  "hello_react.js": "/packs/js/hello_react-98df1de4576fcecad564.js",
-  "hello_react.js.map": "/packs/js/hello_react-98df1de4576fcecad564.js.map",
+  "hello_react.css": "/packs/css/hello_react-460a5439.css",
+  "hello_react.js": "/packs/js/hello_react-af13e27a4289e0d61acc.js",
+  "hello_react.js.map": "/packs/js/hello_react-af13e27a4289e0d61acc.js.map",
   "media/fonts/brand-icons.eot": "/packs/media/fonts/brand-icons-13db00b7.eot",
   "media/fonts/brand-icons.svg": "/packs/media/fonts/brand-icons-a1a749e8.svg",
   "media/fonts/brand-icons.ttf": "/packs/media/fonts/brand-icons-c5ebe0b3.ttf",
@@ -52,7 +53,6 @@
   "media/fonts/outline-icons.woff": "/packs/media/fonts/outline-icons-ef60a4f6.woff",
   "media/fonts/outline-icons.woff2": "/packs/media/fonts/outline-icons-cd6c777f.woff2",
   "media/images/flags.png": "/packs/media/images/flags-9c74e172.png",
-  "server_rendering.css": "/packs/css/server_rendering-460a5439.css",
-  "server_rendering.js": "/packs/js/server_rendering-71de6cc9d37b1845213d.js",
-  "server_rendering.js.map": "/packs/js/server_rendering-71de6cc9d37b1845213d.js.map"
+  "server_rendering.js": "/packs/js/server_rendering-a838d7f928f3294668a3.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-a838d7f928f3294668a3.js.map"
 }

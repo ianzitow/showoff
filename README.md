@@ -1,24 +1,8 @@
-# README
+# Showoff Tech Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was created with Ruby on Rails 5.2. A wrapper was implemented to encapsulates a private API. A frontend built with React enable users to login, register, create widgets and see them. 
 
-Things you may want to cover:
+Some tests were performed with Rspec, however, due to time constraints, more tests would be nice to have, specially in the frontend.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run the app, you'll need:
+`rails c` in one terminal, and `./bin/webpack-dev-server`.

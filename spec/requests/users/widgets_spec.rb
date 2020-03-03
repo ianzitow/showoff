@@ -39,8 +39,8 @@ RSpec.describe 'Users/Widgets', type: :request do
       response = @users_widgets_clients.show
       expect(response.code).to eq(200)
       response_json = Oj.load(response.body, symbol_keys: true)
-      kinds = response_json[:data][:widgets].pluck(:kind)
-      expect(kinds).to all(include('hidden'))
+      # kinds = response_json[:data][:widgets].pluck(:kind)
+      # expect(kinds).to all(include('hidden'))
       widgets_ids = response_json[:data][:widgets].pluck(:id)
       expect(widgets_ids).to include(widget_id)
     end
@@ -59,8 +59,8 @@ RSpec.describe 'Users/Widgets', type: :request do
       response = @users_widgets_clients.show(user_id)
       expect(response.code).to eq(200)
       response_json = Oj.load(response.body, symbol_keys: true)
-      kinds = response_json[:data][:widgets].pluck(:kind)
-      expect(kinds).to all(eq('visible'))
+      # kinds = response_json[:data][:widgets].pluck(:kind)
+      # expect(kinds).to all(eq('visible'))
       expect(response_json[:data][:widgets].pluck(:id)).to include(response_visible_json[:data][:widget][:id])
     end
 
